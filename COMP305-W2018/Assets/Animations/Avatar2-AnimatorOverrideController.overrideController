@@ -1,0 +1,14 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!221 &22100000
+AnimatorOverrideController:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Avatar2-AnimatorOverrideController
+  m_Controller: {fileID: 9100000, guid: 6ed58a68f8ae14b88bbfa94e35861073, type: 2}
+  m_Clips:
+  - m_OriginalClip: {fileID: 7400000, guid: 7d2f66fcc107746438250663a210e2e3, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: efe4be56df57547beb8541e5459b7e57, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 72592fbaafd7549e7850df0695171b55, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 8032f1a1586c843b789f4349e1f9ad34, type: 2}
