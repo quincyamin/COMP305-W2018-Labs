@@ -157,6 +157,11 @@ Prefab:
       propertyPath: jumpKey
       value: 32
       objectReference: {fileID: 0}
+    - target: {fileID: 212025958959799728, guid: d02bde37f62894fbdacae417c82d3e16,
+        type: 2}
+      propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: d02bde37f62894fbdacae417c82d3e16, type: 2}
   m_IsPrefabParent: 0
