@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Ground
+  - Gem
+  - Coin
+  - Banana
   layers:
   - Default
   - TransparentFX

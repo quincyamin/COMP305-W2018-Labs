@@ -10,45 +10,45 @@ public class CameraScript : MonoBehaviour
     public Transform player;
 
     private Camera _camera;
-    private float startXPos;
-    private float midRegion;
-    private float offset;
-    private float fieldOfView;
+    private float _startXPos;
+    private float _midRegion;
+    private float _offset;
+    private float _fieldOfView;
 
-    void Start()
+    private void Start()
     {
         _camera = GetComponent<Camera>();
-        regionText.text = "Region 1";
-        midRegion = cameraWidth / 2;
-        startXPos = transform.position.x - midRegion;
-        offset = player.position.x - transform.position.x;
-        fieldOfView = _camera.orthographicSize;
+        if(regionText) regionText.text = "Region 1";
+        _midRegion = cameraWidth / 2;
+        _startXPos = transform.position.x - _midRegion;
+        _offset = player.position.x - transform.position.x;
+        _fieldOfView = _camera.orthographicSize;
     }
 
-    void Update()
+    private void Update()
     {
-        if (player.position.x > startXPos + midRegion)
+        if (player.position.x > _startXPos + _midRegion)
         {
-            if (player.position.x > startXPos + cameraWidth)
+            if (player.position.x > _startXPos + cameraWidth)
             {
-                regionText.text = "Region 3";
-                fieldOfView -= Input.GetAxis("Horizontal") * Time.deltaTime;
-                fieldOfView = Mathf.Clamp(fieldOfView, 5f, 6.5f);
-                _camera.orthographicSize = fieldOfView;
+                if(regionText) regionText.text = "Region 3";
+                _fieldOfView -= Input.GetAxis("Horizontal") * Time.deltaTime;
+                _fieldOfView = Mathf.Clamp(_fieldOfView, 5f, 6.5f);
+                _camera.orthographicSize = _fieldOfView;
             }
             else
             {
-                regionText.text = "Region 2";
+                if(regionText) regionText.text = "Region 2";
             }
-            offset = player.position.x - transform.position.x;
-            float xPos = offset + transform.position.x;
+            _offset = player.position.x - transform.position.x;
+            var xPos = _offset + transform.position.x;
             xPos = Mathf.Clamp(xPos, 0f, 36.7f);
             transform.position = new Vector3(xPos, 0f, -10f);
 
         }
         else
         {
-            regionText.text = "Region 1";
+            if(regionText) regionText.text = "Region 1";
         }
     }
 }

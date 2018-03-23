@@ -8,16 +8,16 @@ public class ButtonScript : MonoBehaviour {
     public Sprite mySprite;
     public GameObject character;
 
-    private SpriteRenderer rend;
+    private SpriteRenderer _rend;
 
 	// Use this for initialization
 	void Start () {
-        rend = character.GetComponent<SpriteRenderer>();
+        _rend = character.GetComponent<SpriteRenderer>();
 	}
 
     void OnMouseDown()
     {
-        rend.sprite = mySprite;
+        _rend.sprite = mySprite;
     }
 
 
